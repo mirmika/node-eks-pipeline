@@ -15,7 +15,7 @@ jobs:
         IMAGE_TAG: ${{ github.ref_type == 'tag' && github.ref_name || github.sha }}
     steps:
         - name: Print Name value
-          run: echo "$Name"
+          run: echo "Hello, ${{ env.NAME }}"
 
         - name: Checkout Code
           uses: actions/checkout@v4
